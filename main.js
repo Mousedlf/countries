@@ -7,8 +7,12 @@ async function getCountries(){
     const randomCountryFromArray = data[getRandomCountryFromArray].name.common;
     console.log(randomCountryFromArray)
 
+    const numberOfCountries = document.querySelector('#nb')
+    let numberOfCountriesValue = data.length
 
+    numberOfCountries.innerHTML += numberOfCountriesValue
 }
 getCountries()
+
 
 
