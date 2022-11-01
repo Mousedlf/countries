@@ -13,15 +13,16 @@
 <body>
 <p id="nb">Number of countries : </p>
 
-<div class="border-dark d-flex justify-content-center w-75">
-    <h2 id="country">Random country : </h2>
-    <form action="">
-        <label for="theCapital">Capital : </label><input type="text" name="theCapital">
-        <label for="theRegion">Region : </label><input type="text" name="theRegion">
-        <label for="theLanguage">Language : </label><input type="text" name="theLanguage">
-        <label for="theCurrency">Currency : </label><input type="text" name="theCurrency">
-        <input type="submit" value="Check">
-    </form>
+<div class="border-dark d-flex flex-column justify-content-center w-50 mx-auto">
+    <div class="d-flex align-items-center">
+        <h2 id="country"></h2>
+        <button id="refresh" class="ms-2 badge rounded-pill text-bg-warning">change country</button>
+    </div>
+    <span>Capital</span><button id="capital" class="btn btn-dark">press to reveal</button>
+    <span>Region</span><button id="region" class="btn btn-dark">press to reveal</button>
+    <span>Currency</span><button id="currency" class="btn btn-dark">press to reveal</button>
+    <span>Languages</span><button id="languages" class="btn btn-dark">press to reveal</button>
+
 </div>
 
 
