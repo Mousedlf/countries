@@ -4,7 +4,7 @@ const changeCountry = document.querySelector('#refresh')
 const capitalCity = document.querySelector('#capital')
 const languagesSpoken = document.querySelector('#languages')
 const currency = document.querySelector('#currency')
-const region = document.querySelector('#region')
+const regionOfTheCountry = document.querySelector('#region')
 
 async function getTotalNumberOfCountries(){
     let response = await fetch('https://restcountries.com/v3.1/all');
@@ -25,6 +25,7 @@ async function getACountry(){
     const randomCountryFromArray = data[getRandomCountryFromArray].name.common;
 
     randomCountry.innerHTML += randomCountryFromArray
+    console.log(data)
 
     // data[getRandomCountryFromArray].languages
     // data[getRandomCountryFromArray].currencies
@@ -37,10 +38,11 @@ async function getACountry(){
         languagesSpoken.innerHTML = data[getRandomCountryFromArray].languages
     })
     currency.addEventListener('click', ()=>{
-        currency.innerHTML = data[getRandomCountryFromArray].currency
+        currency.innerHTML = data[getRandomCountryFromArray].currencies
+        console.log(data[getRandomCountryFromArray].currencies)
     })
-    region.addEventListener('click', ()=>{
-        region.innerHTML = data[getRandomCountryFromArray].languages
+    regionOfTheCountry.addEventListener('click', ()=>{
+        regionOfTheCountry.innerHTML = data[getRandomCountryFromArray].region
     })
 }
 getACountry()
@@ -53,17 +55,6 @@ changeCountry.addEventListener('click', ()=>{
     currency.innerHTML = 'press to reveal'
     region.innerHTML = 'press to reveal'
 })
-
-
-
-/* essai précédent
-
-languages.forEach(language =>{
-    console.log(language)
-    let template = `<div id="${language}" class="btn border-dark">${language}</div>`
-    document.querySelector('#buttons').innerHTML+=template
-})
-*/
 
 
 
