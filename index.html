@@ -11,9 +11,20 @@
     <title>API Countries</title>
 </head>
 <body>
-<div id="buttons" class="d-flex justify-content-center align-items-center">
-    <button id="${country}" class="btn border-dark">a german speaking country</button>
-    <p id="nb">Number of countries : </p>
+<p id="nb">Number of countries : </p>
+
+<div class="border-dark d-flex justify-content-center w-75">
+    <h2 id="country">Random country : </h2>
+    <form action="">
+        <label for="theCapital">Capital : </label><input type="text" name="theCapital">
+        <label for="theRegion">Region : </label><input type="text" name="theRegion">
+        <label for="theLanguage">Language : </label><input type="text" name="theLanguage">
+        <label for="theCurrency">Currency : </label><input type="text" name="theCurrency">
+        <input type="submit" value="Check">
+    </form>
+</div>
+
+
 </div>
 
 <script src="main.js"></script>
