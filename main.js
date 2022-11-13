@@ -2,7 +2,7 @@
 const randomCountry = document.querySelector('#country')
 const changeCountry = document.querySelector('#refresh')
 const capitalCity = document.querySelector('#capital')
-const languagesSpoken = document.querySelector('#languages')
+const theFlag = document.querySelector('#flag')
 const currency = document.querySelector('#currency')
 const regionOfTheCountry = document.querySelector('#region')
 
@@ -34,8 +34,9 @@ async function getACountry(){
     capitalCity.addEventListener('click', ()=>{
         capitalCity.innerHTML = data[getRandomCountryFromArray].capital
     })
-    languagesSpoken.addEventListener('click', ()=>{
-        languagesSpoken.innerHTML = data[getRandomCountryFromArray].languages
+    theFlag.addEventListener('click', ()=>{ //object Object?
+        theFlag.innerHTML = data[getRandomCountryFromArray].flag
+
     })
     currency.addEventListener('click', ()=>{
         currency.innerHTML = data[getRandomCountryFromArray].currencies
@@ -51,7 +52,7 @@ getACountry()
 changeCountry.addEventListener('click', ()=>{
     randomCountry.innerHTML = getACountry()  // ici problème [object promise]? mettre un then qqpart?
     capitalCity.innerHTML = 'press to reveal'
-    languagesSpoken.innerHTML = 'press to reveal'
+    theFlag.innerHTML = 'press to reveal'
     currency.innerHTML = 'press to reveal'
     region.innerHTML = 'press to reveal'
 })
